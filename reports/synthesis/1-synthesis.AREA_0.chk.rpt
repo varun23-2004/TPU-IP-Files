@@ -1,0 +1,106 @@
+
+60. Executing CHECK pass (checking for obvious problems).
+Checking module apb_master_slave_interface...
+Warning: Wire apb_master_slave_interface.\pwrite is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [31] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [30] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [29] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [28] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [27] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [26] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [25] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [24] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [23] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [22] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [21] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [20] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [19] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [18] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [17] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [16] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [15] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [14] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [13] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [12] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [11] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [10] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [9] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [8] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [7] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [6] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [5] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [4] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [3] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [2] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [1] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pwdata [0] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\psel is used but has no driver.
+Warning: Wire apb_master_slave_interface.\presetn is used but has no driver.
+Warning: Wire apb_master_slave_interface.\penable is used but has no driver.
+Warning: Wire apb_master_slave_interface.\pclk is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [31] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [30] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [29] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [28] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [27] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [26] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [25] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [24] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [23] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [22] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [21] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [20] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [19] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [18] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [17] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [16] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [15] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [14] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [13] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [12] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [11] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [10] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [9] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [8] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [7] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [6] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [5] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [4] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [3] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [2] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [1] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\paddr [0] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_ready is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [31] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [30] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [29] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [28] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [27] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [26] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [25] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [24] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [23] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [22] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [21] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [20] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [19] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [18] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [17] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [16] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [15] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [14] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [13] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [12] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [11] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [10] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [9] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [8] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [7] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [6] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [5] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [4] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [3] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [2] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [1] is used but has no driver.
+Warning: Wire apb_master_slave_interface.\m_rdata [0] is used but has no driver.
+Found and reported 102 problems.
