@@ -1,0 +1,27 @@
+
+61. Printing statistics.
+
+=== apb_master_slave_interface ===
+
+   Number of wires:                196
+   Number of wire bits:            382
+   Number of public wires:          19
+   Number of public wire bits:     205
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                281
+     sky130_fd_sc_hd__and2_2        32
+     sky130_fd_sc_hd__and3b_2        1
+     sky130_fd_sc_hd__buf_1        107
+     sky130_fd_sc_hd__buf_2          2
+     sky130_fd_sc_hd__dfrtp_2       67
+     sky130_fd_sc_hd__inv_2          2
+     sky130_fd_sc_hd__mux2_2        65
+     sky130_fd_sc_hd__nand2_2        1
+     sky130_fd_sc_hd__o21ai_2        1
+     sky130_fd_sc_hd__or2b_2         2
+     sky130_fd_sc_hd__or3b_2         1
+
+   Chip area for module '\apb_master_slave_interface': 3203.072000
+

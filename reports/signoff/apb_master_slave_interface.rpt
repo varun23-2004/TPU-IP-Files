@@ -1,0 +1,51 @@
+CVC: Log output to /openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/reports/signoff/apb_master_slave_interface.rpt
+CVC: Error output to /openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/reports/signoff/apb_master_slave_interface.rpt.error.gz
+CVC: Debug output to /openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/reports/signoff/apb_master_slave_interface.rpt.debug.gz
+CVC: Circuit Validation Check  Version 1.1.4
+CVC: Start: Tue Apr  7 10:01:44 2026
+
+Using the following parameters for CVC (Circuit Validation Check) from /home/poorvi/.ciel/sky130A/libs.tech/openlane/cvc/cvcrc
+CVC_TOP = 'apb_master_slave_interface'
+CVC_NETLIST = '/openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/tmp/signoff/apb_master_slave_interface.cdl'
+CVC_MODE = 'apb_master_slave_interface'
+CVC_MODEL_FILE = '/home/poorvi/.ciel/sky130A/libs.tech/openlane/cvc/models'
+CVC_POWER_FILE = '/openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/tmp/signoff/apb_master_slave_interface.power'
+CVC_FUSE_FILE = ''
+CVC_REPORT_FILE = '/openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/reports/signoff/apb_master_slave_interface.rpt'
+CVC_REPORT_TITLE = 'CVC $CVC_TOP'
+CVC_CIRCUIT_ERROR_LIMIT = '100'
+CVC_SEARCH_LIMIT = '100'
+CVC_LEAK_LIMIT = '0.0002'
+CVC_SOI = 'false'
+CVC_SCRC = 'false'
+CVC_VTH_GATES = 'false'
+CVC_MIN_VTH_GATES = 'false'
+CVC_IGNORE_VTH_FLOATING = 'false'
+CVC_IGNORE_NO_LEAK_FLOATING = 'false'
+CVC_LEAK_OVERVOLTAGE = 'true'
+CVC_LOGIC_DIODES = 'false'
+CVC_ANALOG_GATES = 'true'
+CVC_BACKUP_RESULTS = 'false'
+CVC_MOS_DIODE_ERROR_THRESHOLD = '0'
+CVC_SHORT_ERROR_THRESHOLD = '0'
+CVC_BIAS_ERROR_THRESHOLD = '0'
+CVC_FORWARD_ERROR_THRESHOLD = '0'
+CVC_FLOATING_ERROR_THRESHOLD = '0'
+CVC_GATE_ERROR_THRESHOLD = '0'
+CVC_LEAK?_ERROR_THRESHOLD = '0'
+CVC_EXPECTED_ERROR_THRESHOLD = '0'
+CVC_OVERVOLTAGE_ERROR_THRESHOLD = '0'
+CVC_PARALLEL_CIRCUIT_PORT_LIMIT = '0'
+CVC_CELL_ERROR_LIMIT_FILE = ''
+CVC_CELL_CHECKSUM_FILE = ''
+CVC_LARGE_CIRCUIT_SIZE = '10000000'
+CVC_NET_CHECK_FILE = ''
+CVC_MODEL_CHECK_FILE = ''
+End of parameters
+
+CVC: Reading device model settings...
+CVC: Reading power settings...
+CVC: Parsing netlist /openlane/designs/apb_design/runs/RUN_2026.04.07_09.59.55/tmp/signoff/apb_master_slave_interface.cdl
+Cdl fixed data size 147703
+Usage CDL: Time: 0  Memory: 16548  I/O: 4328  Swap: 0
+CVC: Counting and linking...
