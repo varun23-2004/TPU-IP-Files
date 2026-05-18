@@ -1,0 +1,630 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: rstn (input port clocked by clk)
+Endpoint: _454_ (recovery check against rising-edge clock clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          2.00    2.00 ^ input external delay
+                  1.57    1.16    3.16 ^ rstn (in)
+    68    0.35                           rstn (net)
+                  1.57    0.00    3.16 ^ _454_/RESET_B (sky130_fd_sc_hd__dfrtp_2)
+                                  3.16   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                                  9.75 ^ _454_/CLK (sky130_fd_sc_hd__dfrtp_2)
+                         -0.25    9.50   library recovery time
+                                  9.50   data required time
+-----------------------------------------------------------------------------
+                                  9.50   data required time
+                                 -3.16   data arrival time
+-----------------------------------------------------------------------------
+                                  6.34   slack (MET)
+
+
+Startpoint: clk (clock source 'clk')
+Endpoint: pclk (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    5.00    5.00   clock clk (fall edge)
+                  0.25    0.20    5.20 v clk (in)
+    68    0.12                           clk (net)
+                  0.25    0.00    5.20 v _456_/A (sky130_fd_sc_hd__buf_2)
+                  0.09    0.28    5.48 v _456_/X (sky130_fd_sc_hd__buf_2)
+     1    0.03                           pclk (net)
+                  0.09    0.00    5.48 v pclk (out)
+                                  5.48   data arrival time
+
+                  0.15   10.00   10.00   clock clk (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -5.48   data arrival time
+-----------------------------------------------------------------------------
+                                  2.27   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+_454_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_457_/A                                 0.75    1.57   -0.82 (VIOLATED)
+_453_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_430_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_445_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_451_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_448_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_399_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_433_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_436_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_397_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_444_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_416_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_426_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_423_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_394_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_405_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_407_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_398_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_395_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_437_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_419_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_439_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_410_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_417_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_418_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_413_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_415_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_389_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_449_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_447_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_411_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_441_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_438_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_414_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_432_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_400_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_434_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_427_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_425_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_403_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_420_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_421_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_424_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_409_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_404_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_408_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_446_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_440_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_390_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_391_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_393_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_396_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_443_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_431_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_442_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_412_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_428_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_429_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_435_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_392_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_455_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_452_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_401_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_422_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_402_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_406_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+_450_/RESET_B                           0.75    1.57   -0.82 (VIOLATED)
+rstn                                    0.75    1.57   -0.82 (VIOLATED)
+m_ready                                 0.75    1.06   -0.31 (VIOLATED)
+_195_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_197_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_189_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_183_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_191_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_193_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_185_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_199_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_182_/X                                 0.75    1.06   -0.31 (VIOLATED)
+_187_/B                                 0.75    1.06   -0.31 (VIOLATED)
+_385_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_383_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_379_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_293_/A                                 0.75    0.97   -0.22 (VIOLATED)
+_335_/A                                 0.75    0.97   -0.22 (VIOLATED)
+_387_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_381_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_314_/A                                 0.75    0.97   -0.22 (VIOLATED)
+_271_/X                                 0.75    0.97   -0.22 (VIOLATED)
+_272_/A                                 0.75    0.97   -0.22 (VIOLATED)
+_377_/S                                 0.75    0.97   -0.22 (VIOLATED)
+_346_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_336_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_338_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_342_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_348_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_340_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_350_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_344_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_354_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_352_/S                                 0.75    0.91   -0.16 (VIOLATED)
+_335_/X                                 0.75    0.91   -0.16 (VIOLATED)
+_257_/S                                 0.75    0.84   -0.09 (VIOLATED)
+_263_/S                                 0.75    0.84   -0.09 (VIOLATED)
+_259_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_269_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_265_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_267_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_261_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_251_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_250_/X                                 0.75    0.83   -0.08 (VIOLATED)
+_253_/A                                 0.75    0.83   -0.08 (VIOLATED)
+_255_/S                                 0.75    0.83   -0.08 (VIOLATED)
+_333_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_331_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_319_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_321_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_327_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_329_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_325_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_315_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_317_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_323_/S                                 0.75    0.79   -0.04 (VIOLATED)
+_314_/X                                 0.75    0.79   -0.04 (VIOLATED)
+_367_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_373_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_365_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_363_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_361_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_375_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_359_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_371_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_369_/S                                 0.75    0.75   -0.00 (VIOLATED)
+_356_/X                                 0.75    0.75   -0.00 (VIOLATED)
+_357_/S                                 0.75    0.75   -0.00 (VIOLATED)
+
+max fanout
+
+Pin                                   Limit Fanout  Slack
+---------------------------------------------------------
+rstn                                     10     68    -58 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+rstn                                    0.33    0.35   -0.02 (VIOLATED)
+
+
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 382 unannotated drivers.
+ clk
+ m_addr[0]
+ m_addr[10]
+ m_addr[11]
+ m_addr[12]
+ m_addr[13]
+ m_addr[14]
+ m_addr[15]
+ m_addr[16]
+ m_addr[17]
+ m_addr[18]
+ m_addr[19]
+ m_addr[1]
+ m_addr[20]
+ m_addr[21]
+ m_addr[22]
+ m_addr[23]
+ m_addr[24]
+ m_addr[25]
+ m_addr[26]
+ m_addr[27]
+ m_addr[28]
+ m_addr[29]
+ m_addr[2]
+ m_addr[30]
+ m_addr[31]
+ m_addr[3]
+ m_addr[4]
+ m_addr[5]
+ m_addr[6]
+ m_addr[7]
+ m_addr[8]
+ m_addr[9]
+ m_req
+ m_wdata[0]
+ m_wdata[10]
+ m_wdata[11]
+ m_wdata[12]
+ m_wdata[13]
+ m_wdata[14]
+ m_wdata[15]
+ m_wdata[16]
+ m_wdata[17]
+ m_wdata[18]
+ m_wdata[19]
+ m_wdata[1]
+ m_wdata[20]
+ m_wdata[21]
+ m_wdata[22]
+ m_wdata[23]
+ m_wdata[24]
+ m_wdata[25]
+ m_wdata[26]
+ m_wdata[27]
+ m_wdata[28]
+ m_wdata[29]
+ m_wdata[2]
+ m_wdata[30]
+ m_wdata[31]
+ m_wdata[3]
+ m_wdata[4]
+ m_wdata[5]
+ m_wdata[6]
+ m_wdata[7]
+ m_wdata[8]
+ m_wdata[9]
+ m_write
+ prdata[0]
+ prdata[10]
+ prdata[11]
+ prdata[12]
+ prdata[13]
+ prdata[14]
+ prdata[15]
+ prdata[16]
+ prdata[17]
+ prdata[18]
+ prdata[19]
+ prdata[1]
+ prdata[20]
+ prdata[21]
+ prdata[22]
+ prdata[23]
+ prdata[24]
+ prdata[25]
+ prdata[26]
+ prdata[27]
+ prdata[28]
+ prdata[29]
+ prdata[2]
+ prdata[30]
+ prdata[31]
+ prdata[3]
+ prdata[4]
+ prdata[5]
+ prdata[6]
+ prdata[7]
+ prdata[8]
+ prdata[9]
+ pready
+ rstn
+ _177_/X
+ _178_/Y
+ _179_/X
+ _180_/Y
+ _181_/X
+ _182_/X
+ _183_/X
+ _184_/X
+ _185_/X
+ _186_/X
+ _187_/X
+ _188_/X
+ _189_/X
+ _190_/X
+ _191_/X
+ _192_/X
+ _193_/X
+ _194_/X
+ _195_/X
+ _196_/X
+ _197_/X
+ _198_/X
+ _199_/X
+ _200_/X
+ _201_/X
+ _202_/X
+ _203_/X
+ _204_/X
+ _205_/X
+ _206_/X
+ _207_/X
+ _208_/X
+ _209_/X
+ _210_/X
+ _211_/X
+ _212_/X
+ _213_/X
+ _214_/X
+ _215_/X
+ _216_/X
+ _217_/X
+ _218_/X
+ _219_/X
+ _220_/X
+ _221_/X
+ _222_/X
+ _223_/X
+ _224_/X
+ _225_/X
+ _226_/X
+ _227_/X
+ _228_/X
+ _229_/X
+ _230_/X
+ _231_/X
+ _232_/X
+ _233_/X
+ _234_/X
+ _235_/X
+ _236_/X
+ _237_/X
+ _238_/X
+ _239_/X
+ _240_/X
+ _241_/X
+ _242_/X
+ _243_/X
+ _244_/X
+ _245_/X
+ _246_/X
+ _247_/X
+ _248_/X
+ _249_/X
+ _250_/X
+ _251_/X
+ _252_/X
+ _253_/Y
+ _254_/Y
+ _255_/X
+ _256_/X
+ _257_/X
+ _258_/X
+ _259_/X
+ _260_/X
+ _261_/X
+ _262_/X
+ _263_/X
+ _264_/X
+ _265_/X
+ _266_/X
+ _267_/X
+ _268_/X
+ _269_/X
+ _270_/X
+ _271_/X
+ _272_/X
+ _273_/X
+ _274_/X
+ _275_/X
+ _276_/X
+ _277_/X
+ _278_/X
+ _279_/X
+ _280_/X
+ _281_/X
+ _282_/X
+ _283_/X
+ _284_/X
+ _285_/X
+ _286_/X
+ _287_/X
+ _288_/X
+ _289_/X
+ _290_/X
+ _291_/X
+ _292_/X
+ _293_/X
+ _294_/X
+ _295_/X
+ _296_/X
+ _297_/X
+ _298_/X
+ _299_/X
+ _300_/X
+ _301_/X
+ _302_/X
+ _303_/X
+ _304_/X
+ _305_/X
+ _306_/X
+ _307_/X
+ _308_/X
+ _309_/X
+ _310_/X
+ _311_/X
+ _312_/X
+ _313_/X
+ _314_/X
+ _315_/X
+ _316_/X
+ _317_/X
+ _318_/X
+ _319_/X
+ _320_/X
+ _321_/X
+ _322_/X
+ _323_/X
+ _324_/X
+ _325_/X
+ _326_/X
+ _327_/X
+ _328_/X
+ _329_/X
+ _330_/X
+ _331_/X
+ _332_/X
+ _333_/X
+ _334_/X
+ _335_/X
+ _336_/X
+ _337_/X
+ _338_/X
+ _339_/X
+ _340_/X
+ _341_/X
+ _342_/X
+ _343_/X
+ _344_/X
+ _345_/X
+ _346_/X
+ _347_/X
+ _348_/X
+ _349_/X
+ _350_/X
+ _351_/X
+ _352_/X
+ _353_/X
+ _354_/X
+ _355_/X
+ _356_/X
+ _357_/X
+ _358_/X
+ _359_/X
+ _360_/X
+ _361_/X
+ _362_/X
+ _363_/X
+ _364_/X
+ _365_/X
+ _366_/X
+ _367_/X
+ _368_/X
+ _369_/X
+ _370_/X
+ _371_/X
+ _372_/X
+ _373_/X
+ _374_/X
+ _375_/X
+ _376_/X
+ _377_/X
+ _378_/X
+ _379_/X
+ _380_/X
+ _381_/X
+ _382_/X
+ _383_/X
+ _384_/X
+ _385_/X
+ _386_/X
+ _387_/X
+ _388_/X
+ _389_/Q
+ _390_/Q
+ _391_/Q
+ _392_/Q
+ _393_/Q
+ _394_/Q
+ _395_/Q
+ _396_/Q
+ _397_/Q
+ _398_/Q
+ _399_/Q
+ _400_/Q
+ _401_/Q
+ _402_/Q
+ _403_/Q
+ _404_/Q
+ _405_/Q
+ _406_/Q
+ _407_/Q
+ _408_/Q
+ _409_/Q
+ _410_/Q
+ _411_/Q
+ _412_/Q
+ _413_/Q
+ _414_/Q
+ _415_/Q
+ _416_/Q
+ _417_/Q
+ _418_/Q
+ _419_/Q
+ _420_/Q
+ _421_/Q
+ _422_/Q
+ _423_/Q
+ _424_/Q
+ _425_/Q
+ _426_/Q
+ _427_/Q
+ _428_/Q
+ _429_/Q
+ _430_/Q
+ _431_/Q
+ _432_/Q
+ _433_/Q
+ _434_/Q
+ _435_/Q
+ _436_/Q
+ _437_/Q
+ _438_/Q
+ _439_/Q
+ _440_/Q
+ _441_/Q
+ _442_/Q
+ _443_/Q
+ _444_/Q
+ _445_/Q
+ _446_/Q
+ _447_/Q
+ _448_/Q
+ _449_/Q
+ _450_/Q
+ _451_/Q
+ _452_/Q
+ _453_/Q
+ _454_/Q
+ _455_/Q
+ _456_/X
+ _457_/X
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 135
+max fanout violation count 1
+max cap violation count 1
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
